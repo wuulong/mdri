@@ -1,0 +1,114 @@
+version: 0.1.0
+installed_at: '2025-10-06T04:02:40.395Z'
+install_type: expansion-pack
+expansion_pack_id: bmad-mdri
+expansion_pack_name: BMad 馬太鞍事件災害應變擴充包
+ides_setup:
+  - claude-code
+  - gemini
+files:
+  - path: .bmad-mdri/config.yaml
+    hash: 53ac8c51c0e1a114
+    modified: false
+  - path: .bmad-mdri/README.md
+    hash: a3b82290faa8f95c
+    modified: false
+  - path: .bmad-mdri/workflows/disaster-handling-workflow.yaml
+    hash: 56b1485708afdfbd
+    modified: false
+  - path: .bmad-mdri/utils/workflow-management.md
+    hash: c2196880f2281f84
+    modified: false
+  - path: .bmad-mdri/utils/bmad-doc-template.md
+    hash: 34df6ead8b91abfc
+    modified: false
+  - path: .bmad-mdri/tasks/kb-mode-interaction.md
+    hash: 4d6b921c24ba4999
+    modified: false
+  - path: .bmad-mdri/tasks/initial-disaster-report.md
+    hash: 52f5fe612ae18708
+    modified: false
+  - path: .bmad-mdri/tasks/execute-checklist.md
+    hash: ec7e5d34b03eefcb
+    modified: false
+  - path: .bmad-mdri/tasks/create-doc.md
+    hash: 0a6aeba58cd7a3e4
+    modified: false
+  - path: .bmad-mdri/tasks/advanced-elicitation.md
+    hash: d39118bf32237a21
+    modified: false
+  - path: .bmad-mdri/templates/transport_task_assignment_tmpl.yaml
+    hash: 84be932af0ad6fbd
+    modified: false
+  - path: .bmad-mdri/templates/supply_offer_tmpl.yaml
+    hash: 015b8a0ed7c21cba
+    modified: false
+  - path: .bmad-mdri/templates/shelter_demand_tmpl.yaml
+    hash: 89272fabc8d37b09
+    modified: false
+  - path: .bmad-mdri/templates/press_release_tmpl.yaml
+    hash: 4913db2cd15b2e77
+    modified: false
+  - path: .bmad-mdri/templates/disaster_report_tmpl.yaml
+    hash: f354098ad3d2d2e6
+    modified: false
+  - path: .bmad-mdri/templates/ai_matching_suggestion_tmpl.yaml
+    hash: 05acac494eddfc90
+    modified: false
+  - path: .bmad-mdri/data/mataan-river-geography.md
+    hash: d0a65d3072ca5478
+    modified: false
+  - path: .bmad-mdri/data/mataan-incident-background.md
+    hash: 93e413ee6f06fea0
+    modified: false
+  - path: .bmad-mdri/data/elicitation-methods.md
+    hash: 8c3ca9b84c8784c9
+    modified: false
+  - path: .bmad-mdri/data/disaster-relief-regulations.md
+    hash: 8b6ba4039b833d7e
+    modified: false
+  - path: .bmad-mdri/data/bmad-kb.md
+    hash: 57f0e9ae0e54b8e3
+    modified: false
+  - path: .bmad-mdri/checklists/disaster-report-checklist.md
+    hash: 95e9ac790c963e9f
+    modified: false
+  - path: .bmad-mdri/agents/supply_provider.md
+    hash: f081f01f3817ac37
+    modified: false
+  - path: .bmad-mdri/agents/spokesperson.md
+    hash: 9e442e1a3d035873
+    modified: false
+  - path: .bmad-mdri/agents/software_engineer.md
+    hash: db705e7552b32604
+    modified: false
+  - path: .bmad-mdri/agents/matching_coordinator.md
+    hash: 1b4b5391e3341eab
+    modified: false
+  - path: .bmad-mdri/agents/logistics_support.md
+    hash: aa25a915dc64693d
+    modified: false
+  - path: .bmad-mdri/agents/information_verifier.md
+    hash: e7c9fced2ba52d04
+    modified: false
+  - path: .bmad-mdri/agents/information_reporter.md
+    hash: 75b4595d8080a524
+    modified: false
+  - path: .bmad-mdri/agents/demand_publisher.md
+    hash: e379eef30571d480
+    modified: false
+  - path: .bmad-mdri/agents/data_collector.md
+    hash: 12828e2f936596e7
+    modified: false
+  - path: .bmad-mdri/agents/bmad-orchestrator.md
+    hash: afe25319239812b6
+    modified: false
+  - path: .bmad-mdri/agents/ai_matcher.md
+    hash: 7b51af2912f4c1f2
+    modified: false
+  - path: .bmad-mdri/agent-teams/initial-response-team.yaml
+    hash: ecc6761c0a0c5a3e
+    modified: false
+  - path: .bmad-mdri/agent-teams/all-response-team.yaml
+    hash: f063e8824e373efe
+    modified: false

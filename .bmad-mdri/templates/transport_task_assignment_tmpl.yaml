@@ -1,0 +1,44 @@
+# 運輸任務指派模板
+# 用於媒合協調 Agent 指派運輸任務給後勤支援 Agent
+
+task_id: UUID_隨意字串 # 系統自動生成的任務ID，例如：TRANS-20250923-0001
+timestamp: "YYYY-MM-DD HH:MM:SS" # 任務指派時間 (UTC+8)，例如："2025-09-23 17:30:00"
+assigner_info:
+  type: "媒合協調 Agent"
+  id: "COORDINATOR_ID_隨意字串" # 媒合協調 Agent 的ID，例如：Coordinator-001
+
+assigned_to:
+  type: "後勤支援 Agent"
+  id: "LOGISTICS_AGENT_ID_隨意字串" # 被指派的後勤支援 Agent ID (例如：LogisticsTeam-001, VolunteerDriver-B)
+  contact: "聯絡方式" # 例如 Discord ID, 電話號碼，方便任務溝通
+
+transport_details:
+  - item: "飲用水" # 運輸物品/服務名稱
+    quantity: 50 # 數量
+    unit: "箱" # 單位
+    supply_id: "SUPPLY_ID_隨意字串" # 來源供給ID，例如：SUPPLY-20250923-0002
+    demand_id: "DEMAND_ID_隨意字串" # 目標需求ID，例如：DEMAND-20250923-0001
+    pickup_location: "台北市某倉庫" # 取貨地點
+    delivery_location: "花蓮縣光復鄉大馬村活動中心" # 交付地點
+    priority: "急迫" # 任務優先級：立即, 急迫, 一般
+    estimated_pickup_time: "YYYY-MM-DD HH:MM:SS" # 預計取貨時間，例如："2025-09-23 18:00:00"
+    estimated_delivery_time: "YYYY-MM-DD HH:MM:SS" # 預計交付時間，例如："2025-09-24 08:00:00"
+    route_suggestion: "建議路線：國道5號 -> 蘇花改 -> 台9線 -> 光復鄉 (請注意蘇花改路況)" # 建議運輸路線
+    special_instructions: "物資需保持乾燥，輕拿輕放。請與避難所管理者提前聯繫確認接收。" # 特殊指示
+
+  - item: "醫療志工"
+    quantity: 2
+    unit: "人"
+    supply_id: "SUPPLY_ID_隨意字串" # 例如：SUPPLY-20250923-0001
+    demand_id: "DEMAND_ID_隨意字串" # 例如：DEMAND-20250923-0002
+    pickup_location: "花蓮市區集合點"
+    delivery_location: "花蓮縣光復鄉某避難所"
+    priority: "急迫"
+    estimated_pickup_time: "YYYY-MM-DD HH:MM:SS" # 例如："2025-09-23 18:30:00"
+    estimated_delivery_time: "YYYY-MM-DD HH:MM:SS" # 例如："2025-09-23 19:00:00"
+    route_suggestion: "建議路線：台9線 -> 光復鄉 (避難所)"
+    special_instructions: "志工具備急救證照，請協助安排交通工具，並確保其安全抵達。"
+
+overall_instructions: "請後勤支援 Agent 收到任務後，盡快確認並執行。若有任何困難（如道路中斷、天氣惡劣），請立即回報媒合協調 Agent，以便調整方案。" # 整體任務指示
+
+status: "已指派" # 系統內部狀態：已指派, 進行中, 已完成, 已取消, 延遲 (由後勤支援 Agent 更新)

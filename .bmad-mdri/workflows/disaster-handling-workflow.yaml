@@ -1,0 +1,45 @@
+# 災情處理流程
+
+## 概述
+從災情初步回報到媒合協調的標準處理流程，旨在高效應對馬太鞍事件。
+
+id: disaster-handling-workflow
+name: 災情處理流程
+description: 從災情初步回報到媒合協調的標準處理流程。
+
+steps:
+  - task: 災情初步回報
+    agent: 資訊回報 Agent
+    description: 現場志工回報第一手災情。
+
+  - task: 官方資訊監控與擷取
+    agent: 資料收集 Agent
+    description: 監控並擷取官方發布的災害資訊。
+
+  - task: 災情資訊交叉驗證
+    agent: 資訊驗證 Agent
+    description: 核實災情報告的真實性與準確性。
+
+  - task: 避難所需求發布
+    agent: 需求發布 Agent
+    description: 避難所管理者發布物資與人力需求。
+
+  - task: 個人志工供給發布
+    agent: 供給提供 Agent
+    description: 個人志工發布可提供的服務與專長。
+
+  - task: 企業物資捐贈發布
+    agent: 供給提供 Agent
+    description: 企業捐贈者發布可捐贈的物資。
+
+  - task: 智能媒合建議生成
+    agent: AI 媒合 Agent
+    description: AI 媒合 Agent 生成最佳媒合建議。
+
+  - task: 媒合建議人工審核與調整
+    agent: 媒合協調 Agent
+    description: 媒合協調 Agent 審核並調整 AI 建議。
+
+  - task: 運輸任務指派與追蹤
+    agent: 媒合協調 Agent
+    description: 媒合協調 Agent 指派運輸任務給後勤支援 Agent。

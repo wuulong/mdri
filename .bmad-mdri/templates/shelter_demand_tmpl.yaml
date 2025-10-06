@@ -1,0 +1,52 @@
+# 避難所需求發布模板
+# 用於需求發布 Agent 提交避難所物資、人力等需求
+
+demand_id: UUID_隨意字串 # 系統自動生成的需求ID，例如：DEMAND-20250923-0001
+timestamp: "YYYY-MM-DD HH:MM:SS" # 需求發布時間 (UTC+8)，例如："2025-09-23 15:00:00"
+publisher_info:
+  type: "避難所管理者" # 或 "受災戶代表"
+  id: "PUBLISHER_ID_隨意字串" # 發布者ID，例如：ShelterMgr-001 或 受災戶代表-A
+  contact: "聯絡方式" # 例如 Discord ID, 電話號碼，方便後續聯繫確認
+
+location:
+  latitude: 緯度 # GPS 緯度，例如：23.567890
+  longitude: 經度 # GPS 經度，例如：121.234567
+  address: "避難所詳細地址或地標描述" # 例如：花蓮縣光復鄉大馬村活動中心
+  description: "地點補充說明" # 例如：位於馬太鞍溪東側，目前交通尚可通行，但有積水。
+
+demand_list:
+  - item: "飲用水"
+    category: "物資" # 物資, 人力, 機具, 醫療服務, 其他
+    quantity: 100 # 數量
+    unit: "瓶" # 單位：瓶, 箱, 人, 輛, 批, 其他
+    priority: "急迫" # 優先級：立即 (生命攸關), 急迫 (需盡快處理), 一般 (可稍後處理)
+    description: "避難所內約有50人，飲用水僅剩半天份，急需補充。"
+    status: "待處理" # 系統內部狀態：待處理, 處理中, 已滿足, 已取消 (由媒合協調 Agent 更新)
+
+  - item: "醫療志工"
+    category: "人力"
+    quantity: 2
+    unit: "人"
+    priority: "急迫"
+    description: "有數名輕傷者需要包紮處理，避難所內無醫護人員，急需具備急救知識的志工。"
+    status: "待處理"
+
+  - item: "發電機"
+    category: "機具"
+    quantity: 1
+    unit: "台"
+    priority: "一般"
+    description: "避難所內電力中斷，急需發電機供照明及手機充電，以維持基本運作。"
+    status: "待處理"
+
+  - item: "毛毯"
+    category: "物資"
+    quantity: 50
+    unit: "條"
+    priority: "一般"
+    description: "夜間氣溫較低，避難所內毛毯不足，特別是老人和小孩。"
+    status: "待處理"
+
+  description: "整體需求補充說明" # 例如：避難所物資匱乏，急需各方支援，請優先處理飲用水和醫療需求。
+
+status: "待驗證" # 系統內部狀態：待驗證, 已驗證, 駁回 (由資訊驗證 Agent 更新)

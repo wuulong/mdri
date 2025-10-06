@@ -1,0 +1,17 @@
+# 全體應變團隊
+# 包含所有參與馬太鞍事件災害應變的智能代理人
+
+id: all-response-team
+name: 全體應變團隊
+description: 包含所有參與馬太鞍事件災害應變的智能代理人。
+agents:
+  - 資訊回報 Agent
+  - 需求發布 Agent
+  - 供給提供 Agent
+  - 資訊驗證 Agent
+  - 媒合協調 Agent
+  - 後勤支援 Agent
+  - AI 媒合 Agent
+  - 資料收集 Agent
+  - 軟體工程人員 Agent
+  - 發言人 Agent

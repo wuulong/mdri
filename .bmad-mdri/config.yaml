@@ -1,0 +1,116 @@
+name: "BMad 馬太鞍事件災害應變擴充包"
+id: "bmad-mdri"
+description: "專為模擬與支援馬太鞍溪潰壩事件災害應變而設計的擴充包，包含多個智能代理人、任務與模板，旨在提升災害資訊處理、資源媒合與對外溝通效率。"
+version: "0.1.0"
+author: "Your Name/Organization" # 請替換為您的名稱或組織
+
+agents:
+  - id: "資訊回報 Agent"
+    description: "現場志工、受災民眾，負責即時回報災情。"
+    definition_file: "agents/information_reporter.md" # 假設未來會有更詳細的定義文件
+
+  - id: "需求發布 Agent"
+    description: "受災戶代表、避難所管理者，負責發布物資與服務需求。"
+    definition_file: "agents/demand_publisher.md"
+
+  - id: "供給提供 Agent"
+    description: "個人志工、企業捐贈者，負責發布可提供的物資與服務。"
+    definition_file: "agents/supply_provider.md"
+
+  - id: "資訊驗證 Agent"
+    description: "資深志工、社區領袖，負責核實資訊的真實性與準確性。"
+    definition_file: "agents/information_verifier.md"
+
+  - id: "媒合協調 Agent"
+    description: "民間組織協調者，負責人工確認 AI 媒合建議與資源調度。"
+    definition_file: "agents/matching_coordinator.md"
+
+  - id: "後勤支援 Agent"
+    description: "專責後勤志工團隊，負責物資運輸與志工保障。"
+    definition_file: "agents/logistics_support.md"
+
+  - id: "AI 媒合 Agent"
+    description: "系統智能組件，利用演算法提供最佳媒合建議。"
+    definition_file: "agents/ai_matcher.md"
+
+  - id: "資料收集 Agent"
+    description: "資訊探測者，廣泛收集網路與官方開放資料。"
+    definition_file: "agents/data_collector.md"
+
+  - id: "軟體工程人員 Agent"
+    description: "系統建構者，負責系統設計、開發與專案管理。"
+    definition_file: "agents/software_engineer.md"
+
+  - id: "發言人 Agent"
+    description: "對外溝通介面，負責與外部溝通與資訊發布。"
+    definition_file: "agents/spokesperson.md"
+
+tasks:
+  - id: "災情初步回報"
+    description: "現場志工回報第一手災情。"
+    template: "disaster_report_tmpl.yaml"
+
+  - id: "官方資訊監控與擷取"
+    description: "監控並擷取官方發布的災害資訊。"
+
+  - id: "災情資訊交叉驗證"
+    description: "核實災情報告的真實性與準確性。"
+    template: "disaster_report_tmpl.yaml" # 驗證後更新此模板
+
+  - id: "假消息辨識與澄清"
+    description: "辨識並澄清與事件相關的假消息。"
+
+  - id: "避難所需求發布"
+    description: "避難所管理者發布物資與人力需求。"
+    template: "shelter_demand_tmpl.yaml"
+
+  - id: "個人志工供給發布"
+    description: "個人志工發布可提供的服務與專長。"
+    template: "supply_offer_tmpl.yaml"
+
+  - id: "企業物資捐贈發布"
+    description: "企業捐贈者發布可捐贈的物資。"
+    template: "supply_offer_tmpl.yaml"
+
+  - id: "智能媒合建議生成"
+    description: "AI 媒合 Agent 生成最佳媒合建議。"
+    template: "ai_matching_suggestion_tmpl.yaml"
+
+  - id: "媒合建議人工審核與調整"
+    description: "媒合協調 Agent 審核並調整 AI 建議。"
+    template: "ai_matching_suggestion_tmpl.yaml" # 審核後更新此模板
+
+  - id: "運輸任務指派與追蹤"
+    description: "媒合協調 Agent 指派運輸任務給後勤支援 Agent。"
+    template: "transport_task_assignment_tmpl.yaml"
+
+  - id: "物資運輸與交付"
+    description: "後勤支援 Agent 執行物資運輸與交付。"
+    template: "transport_task_assignment_tmpl.yaml" # 執行後更新此模板狀態
+
+  - id: "志工食宿與安全保障"
+    description: "後勤支援 Agent 安排志工後勤保障。"
+
+  - id: "系統功能開發與優化"
+    description: "軟體工程人員 Agent 開發與優化系統功能。"
+
+  - id: "對外新聞發布與媒體溝通"
+    description: "發言人 Agent 發布新聞稿與媒體溝通。"
+    template: "press_release_tmpl.yaml"
+
+  - id: "公眾關懷與社群互動"
+    description: "發言人 Agent 回應公眾關切與收集意見。"
+
+templates:
+  - id: "disaster_report_tmpl"
+    file: "templates/disaster_report_tmpl.yaml"
+  - id: "shelter_demand_tmpl"
+    file: "templates/shelter_demand_tmpl.yaml"
+  - id: "supply_offer_tmpl"
+    file: "templates/supply_offer_tmpl.yaml"
+  - id: "ai_matching_suggestion_tmpl"
+    file: "templates/ai_matching_suggestion_tmpl.yaml"
+  - id: "transport_task_assignment_tmpl"
+    file: "templates/transport_task_assignment_tmpl.yaml"
+  - id: "press_release_tmpl"
+    file: "templates/press_release_tmpl.yaml"

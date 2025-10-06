@@ -1,0 +1,61 @@
+# 供給發布模板
+# 用於供給提供 Agent 提交可提供的物資、人力、機具等資源
+
+supply_id: UUID_隨意字串 # 系統自動生成的供給ID，例如：SUPPLY-20250923-0001
+timestamp: "YYYY-MM-DD HH:MM:SS" # 供給發布時間 (UTC+8)，例如："2025-09-23 16:00:00"
+provider_info:
+  type: "個人志工" # 或 "企業捐贈者", "民間團體"
+  id: "PROVIDER_ID_隨意字串" # 提供者ID，例如：Volunteer-A001, Corp-XYZ
+  name: "提供者姓名/企業名稱" # 例如：王小明, 某某企業股份有限公司
+  contact: "聯絡方式" # 例如 Discord ID, 電話號碼, 電子郵件
+
+location:
+  latitude: 緯度 # GPS 緯度 (若為實體物資或現場服務)，例如：23.678901
+  longitude: 經度 # GPS 經度 (若為實體物資或現場服務)，例如：121.345678
+  address: "供給所在地點描述" # 例如：台北市某倉庫, 花蓮市區集合點, 志工目前所在地
+  description: "地點補充說明" # 例如：物資已打包完成，可隨時運送；志工目前在花蓮市區，可自行前往光復鄉。
+
+supply_list:
+  - item: "醫療志工"
+    category: "人力" # 物資, 人力, 機具, 專業服務, 其他
+    quantity: 3
+    unit: "人"
+    specialty: "具備急救證照" # 專長/規格：具備急救證照, 重機具操作, 心理輔導, 飲用水, 泡麵, 發電機, 其他
+    available_time: "2025-09-24 至 2025-09-30" # 可提供時間/有效期限，例如：YYYY-MM-DD 至 YYYY-MM-DD
+    transport_capacity: "無" # 運輸能力：有 (可自行運送), 無 (需協助運輸)
+    description: "三位志工皆具備急救證照，可提供現場醫療協助，每日可服務8小時。"
+    status: "待媒合" # 系統內部狀態：待媒合, 已媒合, 已取消 (由媒合協調 Agent 更新)
+
+  - item: "飲用水"
+    category: "物資"
+    quantity: 50
+    unit: "箱"
+    specialty: "品牌：某某牌，每箱24瓶"
+    available_time: "2025-09-23 起，長期供應"
+    transport_capacity: "有 (可自行運送至花蓮市區)"
+    description: "共50箱瓶裝飲用水，可自行運送至花蓮市區指定地點，需提前一天通知。"
+    status: "待媒合"
+
+  - item: "挖土機"
+    category: "機具"
+    quantity: 1
+    unit: "台"
+    specialty: "型號：CAT 320，附操作員"
+    available_time: "2025-09-25 起，可使用一週"
+    transport_capacity: "有 (需協助運送至災區)"
+    description: "一台挖土機，可協助清理土石流或道路障礙，需提供燃油與住宿。"
+    status: "待媒合"
+
+  - item: "心理輔導服務"
+    category: "專業服務"
+    quantity: 5
+    unit: "小時"
+    specialty: "具備心理諮詢師執照"
+    available_time: "2025-09-26 至 2025-09-28"
+    transport_capacity: "無"
+    description: "提供線上或現場心理輔導，協助受災民眾處理創傷。"
+    status: "待媒合"
+
+  description: "整體供給補充說明" # 例如：本企業願盡綿薄之力，提供所需物資與人力，希望能幫助馬太鞍事件的受災民眾。
+
+status: "待驗證" # 系統內部狀態：待驗證, 已驗證, 駁回 (由資訊驗證 Agent 更新)

@@ -1,0 +1,39 @@
+# 智能媒合建議模板
+# 用於 AI 媒合 Agent 生成媒合建議，供媒合協調 Agent 審核
+
+suggestion_id: UUID_隨意字串 # 系統自動生成的建議ID，例如：MATCH-20250923-0001
+timestamp: "YYYY-MM-DD HH:MM:SS" # 建議生成時間 (UTC+8)，例如："2025-09-23 17:00:00"
+ai_agent_info:
+  id: "AI_MATCHING_AGENT_ID" # AI 媒合 Agent 的ID，例如：AI-Matcher-001
+  version: "1.0.0" # AI 媒合演算法版本
+
+matching_suggestions:
+  - type: "物資分配" # 媒合類型：物資分配, 人力指派, 機具調度, 專業服務媒合
+    demand_id: "DEMAND_ID_隨意字串" # 需求發布 Agent 提交的需求ID，例如：DEMAND-20250923-0001
+    supply_id: "SUPPLY_ID_隨意字串" # 供給提供 Agent 提交的供給ID，例如：SUPPLY-20250923-0002
+    item: "飲用水" # 媒合的物品/服務名稱
+    quantity: 50 # 媒合的數量
+    unit: "箱" # 單位
+    demand_location: "花蓮縣光復鄉大馬村活動中心" # 需求地點
+    supply_location: "台北市某倉庫" # 供給地點
+    priority_score: 0.95 # AI 計算的媒合優先級分數 (0-1)，分數越高代表越優先
+    reasoning: "需求地點緊急，供給地點可達，物資種類與數量匹配，且需求優先級高。" # AI 媒合的理由
+    transport_route_suggestion: "建議路線：國道5號 -> 蘇花改 -> 台9線 -> 光復鄉 (預計避開受損路段)" # 運輸路線建議
+    estimated_arrival_time: "YYYY-MM-DD HH:MM:SS" # 預計抵達時間，例如："2025-09-24 08:00:00"
+
+  - type: "人力指派"
+    demand_id: "DEMAND_ID_隨意字串" # 例如：DEMAND-20250923-0002
+    supply_id: "SUPPLY_ID_隨意字串" # 例如：SUPPLY-20250923-0001
+    item: "醫療志工"
+    quantity: 2
+    unit: "人"
+    demand_location: "花蓮縣光復鄉某避難所"
+    supply_location: "花蓮市區集合點"
+    priority_score: 0.88
+    reasoning: "需求地點有輕傷者，供給志工具備急救證照，地理位置接近，且志工可服務時間符合。"
+    transport_route_suggestion: "建議路線：台9線 -> 光復鄉 (避難所)"
+    estimated_arrival_time: "YYYY-MM-DD HH:MM:SS" # 例如："2025-09-23 18:30:00"
+
+overall_summary: "本次媒合共生成X條建議，主要集中在飲用水和醫療人力，建議媒合協調 Agent 優先處理高優先級需求，並審核運輸路線建議。" # 整體媒合建議的總結
+
+status: "待審核" # 系統內部狀態：待審核, 已審核 (通過), 已審核 (調整), 已駁回 (由媒合協調 Agent 更新)

@@ -1,0 +1,11 @@
+# 初步應變小組
+# 負責災害發生初期的資訊收集、驗證與初步需求發布
+
+id: initial-response-team
+name: 初步應變小組
+description: 負責災害發生初期的資訊收集、驗證與初步需求發布。
+agents:
+  - 資訊回報 Agent
+  - 資料收集 Agent
+  - 資訊驗證 Agent
+  - 需求發布 Agent

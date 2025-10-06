@@ -1,0 +1,55 @@
+# 災情初步回報模板
+# 用於資訊回報 Agent 提交現場災情資訊
+
+report_id: UUID_隨意字串 # 系統自動生成的回報ID，例如：DR-20250923-0001
+timestamp: "YYYY-MM-DD HH:MM:SS" # 回報時間 (UTC+8)，例如："2025-09-23 14:35:00"
+reporter_info:
+  type: "志工" # 或 "受災民眾"
+  id: "REPORTER_ID_隨意字串" # 回報者ID，例如：DiscordUser#1234 或 志工編號V001
+  contact: "聯絡方式 (選填)" # 例如 Discord ID, 電話號碼，方便後續聯繫確認
+
+location:
+  latitude: 緯度 # GPS 緯度，例如：23.567890
+  longitude: 經度 # GPS 經度，例如：121.234567
+  address: "詳細地址或地標描述" # 例如：花蓮縣光復鄉大馬村馬太鞍溪橋附近，或 馬太鞍部落活動中心
+  description: "地點補充說明" # 例如：距離馬太鞍溪橋上游約500公尺處，靠近某某民宅
+
+disaster_type:
+  - "淹水" # 可多選：淹水, 土石流, 房屋損毀, 道路中斷, 人員受困, 橋樑損毀, 其他
+  # 如果是「其他」，請在下方 description 補充
+  description: "災情類型補充說明 (若選擇其他)" # 例如：山區小徑坍方，導致道路中斷
+
+severity: "緊急" # 緊急程度：極緊急 (生命危關), 緊急 (需立即處理), 一般 (可稍後處理)
+impact_description: "災情詳細描述" # 例如：馬太鞍溪潰壩，洪水夾帶大量泥沙沖入村莊，水深及腰，多戶房屋受損，電力中斷。
+
+casualties:
+  injured: 0 # 受傷人數 (未知請填0)
+  dead: 0 # 死亡人數 (未知請填0)
+  missing: 0 # 失蹤人數 (未知請填0)
+  trapped: 0 # 受困人數 (未知請填0)
+  description: "傷亡情況補充說明" # 例如：目擊約5人被困在屋頂上，其中有老人和小孩，急需救援。
+
+infrastructure_damage:
+  - type: "橋樑" # 可多選：橋樑, 道路, 電力, 通訊, 房屋, 其他
+    status: "損毀" # 損毀, 中斷, 部分損毀, 影響
+    description: "馬太鞍溪橋已完全沖毀，無法通行，導致交通中斷。"
+  - type: "電力"
+    status: "中斷"
+    description: "村莊內多處電線桿倒塌，全村停電。"
+  description: "基礎設施損壞補充說明 (若選擇其他)"
+
+needs:
+  - type: "搜救" # 可多選：搜救, 醫療, 食物, 飲水, 避難所, 清理, 其他
+    description: "急需搜救隊伍，有受困人員，請優先處理。"
+  - type: "飲水"
+    description: "避難所內飲用水不足，約需100瓶。"
+  description: "現場需求補充說明 (若選擇其他)"
+
+media_attachments:
+  - url: "照片/影片連結1" # 例如：https://example.com/photo1.jpg (建議使用圖床或雲端儲存連結)
+    description: "照片描述1：淹水情況，水深及腰。"
+  - url: "照片/影片連結2"
+    description: "照片描述2：馬太鞍溪橋斷裂處。"
+  description: "媒體附件補充說明"
+
+status: "待驗證" # 系統內部狀態：待驗證, 已驗證, 駁回 (由資訊驗證 Agent 更新)
