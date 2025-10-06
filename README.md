@@ -6,6 +6,7 @@ BMad Master Orchestrator 是一個用於工作流程協調、多代理任務、�
 
 ## 系統架構設計重點
 
+- [architecture_document.md](kb/architecture_document.md)
 本系統旨在建立一個高效、透明的民間自主災害協作與智能媒合系統。其主要架構設計考量如下：
 
 ### 主要模組與組件
