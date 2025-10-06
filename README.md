@@ -4,6 +4,11 @@ MDRI (Mata'an Disaster Recovery Initiative) - 馬太鞍災害復原倡議
 ## 專案概述
 BMad Master Orchestrator 是一個用於工作流程協調、多代理任務、角色切換指導的工具，並在不確定諮詢哪個專家時提供指引。它作為 BMad 方法的專家和主協調者，提供統一的介面來管理所有 BMad-Method 的功能，並能動態轉換為任何專業代理。
 
+## 一般
+- 相關背景說明
+    - [近期 vibe coding 學習進展歷程](https://docs.google.com/presentation/d/1zrxaHP6rNMDPOMPYr9O3JyAkAosx6TLJ5vTcoGkUMfU/edit)
+    - YT: [來探討邁向全自動化的可能性 -- feat. 流星 與 哈爸 || Open Vibe Developers](https://youtu.be/GYDbczip1jk?t=1974)
+    
 ## 系統架構設計重點
 
 - [architecture_document.md](kb/architecture_document.md)
